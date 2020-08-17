@@ -1,0 +1,64 @@
+.schedules_list {
+  background-color: $background-color;
+  border: 1px dashed lightgrey;
+  width: 90%;
+  height: 80%;
+  position: absolute;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  h3 {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 15px 5px;
+    padding: 10px;
+    border-bottom: 2px solid lightgrey;
+    span {
+      color: $buttons-headers;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    i {
+      transform: scale(1.8);
+      margin-right: 5px;
+      color: $info-success-color;
+      cursor: pointer;
+    }
+  }
+  table {
+    width: 90%;
+    tr {
+      border: 1px solid lightgrey;
+      border-left: transparent;
+      border-right: transparent;
+    }
+    thead {
+      color: $header-col-text-color;
+      font-size: 22px;
+      font-weight: bold;
+      th {
+        padding: 10px;
+        text-align: left;
+      }
+    }
+    tbody {
+      color: $table-text-color;
+      td {
+        padding: 15px;
+        .edit {
+          color: $info-warn-color;
+          margin: 3px;
+          cursor: pointer;
+        }
+        .remove {
+          color: $trash-color;
+          margin: 3px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

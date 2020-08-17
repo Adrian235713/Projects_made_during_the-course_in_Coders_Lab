@@ -1,0 +1,525 @@
+:root {
+    --primary_colr: #08A6E4;
+    --color-primary-shadow: rgba(7, 172, 230, .16);
+    --color-redish: #FB3B64;
+    --color-green:#55DFB4;
+    --color-black: #000000;
+    --color-grey: #A5A5A5;
+    --color-light-grey: #F7F7F7;
+    --color-white: #FFFFFF;
+}
+
+
+* {
+    text-decoration: none;
+
+}
+
+
+p  {
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
+    font-size:  20px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    text-align: left;
+    padding: 20px;
+
+}
+
+h3 {
+
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
+    font-size:  30px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    padding: 50px;
+
+
+}
+
+/*<!--XXXXXXXXXXXXXXXXXXXXXXXXXXX Header XXXXXXXXXXXXXXXXXXXXXXXXXXX-->/*/
+
+header {
+display: flex;
+height: 70px;
+box-shadow: 1px 1px 5px 2px #00000029 inset;
+
+}
+
+.header-name {
+    width: 50%;
+}
+
+.header-name a {
+    display: block;
+    justify-content: center;
+    padding: 25px;
+    margin-left: 15%;
+
+    height: 62px;
+    width: 300px;
+    box-sizing: border-box;
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary_colr);
+
+
+}
+
+nav {flex-grow: 1;
+    width: 50%;
+    display: flex;
+
+
+
+}
+
+nav  a {
+    display: block;
+    height: 10px;
+    width: 25%;
+    padding: 30px;
+    color: var(--color-grey);
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+nav  a:hover {
+    color: black;
+    box-shadow: 0 4px 2px -2px var(--primary_colr);  /*god bless the internet  XD */
+    border-radius: 1px;
+
+
+
+}
+
+/*<!--XXXXXXXXXXXXXXXXXXXXXXXXXXX Title   XXXXXXXXXXXXXXXXXXXXXXXXXXX-->*/
+
+.container {
+
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+/*}*/
+
+/*Nie mam pojęcia czemu nie chcę mi dziłać ten box chciałem wsztko po za tytułem umieścić w jednym box*/
+/*ale po x godzinach się poddałem...*/
+
+.title {
+
+    display: flex;
+
+    height: 594px;
+
+    background-image: url("../assets/Background.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+
+.title-content {
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    padding: 1px;
+}
+
+.title-content h2 {
+    display: block;
+    padding: 10px;
+    font-size: 40px;
+}
+
+.title-content p {
+    display: block;
+    padding: 5px;
+}
+
+.title-content a {
+
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    border: blue;
+    background-color: var(--primary_colr);
+
+    display: block;
+    height: 50px;
+    width: 500px;
+
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+
+/*<!--XXXXXXXXXXXXXXXXXXXXXXXXXXX Statystyki   XXXXXXXXXXXXXXXXXXXXXXXXXXX-->*/
+.statystyki-tityle h2{
+    display: block;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+
+}
+
+.platform {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    flex-wrap: wrap;
+}
+
+.platform-photo {
+    width: 400px;
+    height:200px;
+    float:right;
+}
+.platform-photo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+/*.platform-photo-efect-1 {*/
+/*    border-radius: 90px;*/
+/*    background: orangered;*/
+/*    max-width: 80px;*/
+/*    height: 80px;*/
+/*    margin: 10px ;*/
+/*    position: relative;*/
+/*    left: 10px;*/
+/*}*/
+
+/*.platform-photo-efect-2 {*/
+/*    border-radius: 90px;*/
+/*    background: orangered;*/
+/*    max-width: 80px;*/
+/*    height: 80px;*/
+/*    margin: 10px ;*/
+/*    position: relative;*/
+/*    left: 10px;*/
+/*    */
+/*}*/
+
+
+/*Nie mogę dojść jak zrobić te koła */
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.platform-photo p:nth-child(2){
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.platform-photo p:nth-child(3){
+    text-align: center;
+    color: #A5A5A5;
+}
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxx--- advertisement --- xxxxxxxxxxxxxxxxxxxxxxxx*/
+
+.advertisement {
+    background-color: #E8E9ED;
+    height: 1400px;
+    width: 1500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.advertisement-rows {
+    display: flex;
+    width: 1124px;
+    height: 370px;
+    background-color: var(--color-white);
+    margin: 50px;
+
+}
+
+.advertisement-rows-box{
+    width: 562px;
+    height: 370px;;
+
+}
+
+
+.advertisement-rows-box-big {
+    width: 700px;
+    height: 370px;
+    margin-right: 50px;
+}
+
+.advertisement-rows-box-small {
+    width: 400px;
+    height: 370px;
+    background-color: var(--color-green);
+}
+
+
+.advertisement-rows p {
+    font-size:  20px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    text-align: left;
+    padding: 20px;
+
+
+}
+
+.advertisement-rows h3 {
+    font-size:  30px;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    padding: 50px;
+
+}
+
+.advertisement img{
+    margin-top: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+
+/*<!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Pricing xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->*/
+
+.pricing {
+    width: 1200px;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    space-evenly: center;
+    padding: 60px;
+}
+
+.pricing-box-1{
+    width: 300px;
+    height: 600px;
+
+    border: 8px solid var(--color-redish);
+    border-radius: 60px;
+}
+
+.pricing-box-2 {
+
+    border: 13px solid var(--primary_colr);
+    width: 300px;
+    height: 700px;
+    border-radius: 60px;
+
+
+}
+
+.pricing-box-3 {
+    width: 300px;
+    height: 600px;
+    border: 8px solid var(--color-green);
+    border-radius: 60px;
+}
+
+
+.pricing-box-1 h3:nth-child(2) {
+    color: var(--color-redish);
+    font-size: 50px;
+}
+
+.pricing-box-2 h3:nth-child(2) {
+    color: var(--primary_colr);
+    font-size: 50px;
+}
+
+.pricing-box-3 h3:nth-child(2) {
+    color: var(--color-green);
+    font-size: 50px;
+}
+
+/*<!--        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx Any questions? xxxxxxxxxxxxxxxxxxxxxxxxxxx-->*/
+
+.questions {
+    width: 1200px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    space-evenly: center;
+    padding: 60px;
+
+}
+
+
+.questions-contact {
+    width: 400px;
+    height: 600px;
+    border-color: coral;
+
+
+}
+
+.questions-forms {
+    width: 400px;
+    height: 600px;
+    border-color: coral;
+
+
+}
+
+
+.questions img {
+    padding: 5%;
+    padding-left: 50px;
+    float: left;
+}
+
+h4  {
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: center;
+
+    text-align: left;
+    padding-left: 50px;
+
+
+    font-size: 40px;
+}
+
+.questions p {
+    color: var(--color-grey);
+}
+
+
+
+.questions-forms {
+    font-size: 30px;
+    padding: 100px;
+    box-sizing: border-box;
+    width: 40%;
+}
+.questions-forms:focus {
+    padding-top: 50px;
+    border-color: #000;
+}
+
+.checkbox {
+    cursor: pointer;
+    display: flex;
+
+}
+.checkbox span {
+    height: 30px;
+    flex-basis: 50px;
+    border: 1px solid var(--color-grey);
+
+}
+
+input[type="text"],
+textarea {
+
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 1px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 4px hsla(0, 0%, 15%, 0.59);
+    width: 100%;
+}
+textarea {
+    min-height: 150px;
+}
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --- footer --- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+footer {
+
+    display: flex;
+    height: 150px;
+    width: 100%;
+    box-shadow: 1px 1px 5px 2px #00000029 inset;
+
+}
+
+.footer-left {
+    width: 50%;
+    height: 150px;
+}
+
+
+.footer-raith {
+    width: 50%;
+    height: 150px;
+    padding-left: 60%;
+}
+
+
+.pricing img {
+    padding: 5%;
+    padding-left: 50px;
+    float: left;
+}
+
+footer img {
+    padding: 5%;
+    padding-top: 50px;
+    padding-left: 50px;
+    float: left;
+
+}
+
+.pricing p {
+    text-align: center;
+}
+
+.footer-left h3 {
+
+    justify-content: center;
+    padding: 25px;
+    text-align: left;
+    padding-left: 200px;
+
+
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary_colr);
+}
+
+.footer-left h3 p {
+    padding-left: 200px;
+    justify-content: center;
+
+    font-size: 17px;
+    letter-spacing: 0px;
+    color: #A5A5A5;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

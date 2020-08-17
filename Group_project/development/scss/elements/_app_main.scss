@@ -1,0 +1,292 @@
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.65); /* Black w/ opacity */
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: $background-color;
+    margin: 15% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 80%;
+
+    /* The Close Button */
+    .closeS,
+    .closeR {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      margin-left: 50px;
+    }
+    .closeS:hover,
+    .closeR:hover,
+    .closeS:focus,
+    .closeR:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+header {
+  height: 80px;
+  background-color: #292F32;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  font-family: $font-charmonman;
+  margin-left: 20px;
+  #first{
+    font-weight:100;
+    color: white;
+    font-size: 2em;
+  }
+  #second{
+    color:#E58A20;
+    font-weight: 700;
+    font-size: 2em;
+  }
+}
+
+.user {
+  margin-right: 75px;
+  .name {
+    color:$background-color;
+    font-family: $font-open-sans;
+    font-size: 1.5em;
+    margin-right: 50px;
+  }
+  .user_Icon {
+    color: $buttons-headers;
+    transform: scale(2.5);
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: $sidebar-nav-color;
+  height: 100%;
+  flex-grow: 1;
+
+  .navigation {
+    li {
+      margin-bottom: 20px;
+      border-left: 3px solid transparent;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .arrow {
+        margin-right: 10px;
+        color: transparent;
+        transform: scale(1.2);
+      }
+      &:hover {
+        border-left: 3px solid $buttons-headers;
+        .arrow {
+          color: $buttons-headers;
+        }
+      }
+    }
+
+    .navigationButton {
+      display: flex;
+      justify-content: space-between;
+      color: $background-color;
+      font-size: 20px;
+      padding-left: 10px;
+      width: 100%;
+    }
+  }
+}
+
+.main_app {
+  background-image: url("../assets/background.png");
+  flex-grow: 7;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.welcome {
+  background-color: $background-color;
+  border: 1px dashed lightgrey;
+  width: 90%;
+  height: 80%;
+  position: absolute;
+  top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $header-col-text-color;
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    width: 45%;
+    text-align: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input[type=text] {
+      margin-bottom: 20px;
+      width: 120%;
+    }
+    input[type=submit] {
+      margin-bottom: 30px;
+      padding: 10px 15px;
+      background-color: $buttons-headers;
+      border: 1px solid transparent;
+      color: $background-color;
+      cursor: pointer;
+    }
+  }
+}
+
+.pulpit {
+  width: 90%;
+  height: 80%;
+  position: absolute;
+  top: 30px;
+  visibility: hidden;
+  .top {
+    display: flex;
+    .widget {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $background-color;
+      border: 2px dashed $info-success-color;
+      width: 200px;
+      height: 200px;
+      margin: 0 10px;
+      .plus {
+        color: $info-success-color;
+        transform: scale(4);
+      }
+      p {
+        font-size: 22px;
+        margin-top: 40px;
+        color: $info-success-color;
+      }
+    }
+  .info_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 200px;
+    margin-left: 10px;
+    .info {
+      background-color: $background-color;
+      border: 2px dashed transparent;
+      height: 30%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 15px;
+      .delete {
+        align-self: flex-start;
+        padding: 5px;
+      }
+      .icon {
+        transform: scale(2);
+      }
+      &:nth-child(1) {
+        border-color: $info-msg-color;
+        color: $info-msg-color;
+      }
+      &:nth-child(2) {
+        border-color: $info-warn-color;
+        color: $info-warn-color;
+      }
+      &:nth-child(3) {
+        border-color: $info-success-color;
+        color: $info-success-color;
+      }
+    }
+  }
+  }
+  .actual_week_plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color;
+    border: 2px dashed lightgrey;
+    margin-top: 20px;
+    margin-left: 10px;
+    h3 {
+      color: $buttons-headers;
+      font-size: 20px;
+      margin: 15px 0;
+    }
+    table {
+      width: 90%;
+      tr {
+        border: 1px solid lightgrey;
+        border-left: transparent;
+        border-right: transparent;
+      }
+      thead {
+        color: $header-col-text-color;
+        font-size: 22px;
+        font-weight: bold;
+        th {
+          padding: 10px;
+          text-align: center;}
+      }
+      tbody {
+        color: $table-text-color;
+        td {
+          padding: 15px;
+        }
+      }
+    }
+    .plan_buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      color: $buttons-headers;
+      margin: 15px;
+
+    }
+
+
+  }
+}
+
+
+

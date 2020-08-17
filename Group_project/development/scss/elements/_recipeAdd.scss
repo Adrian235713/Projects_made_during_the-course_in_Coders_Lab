@@ -1,0 +1,106 @@
+.add_recipe_container {
+  background-color: $background-color;
+  border: 1px dashed lightgrey;
+  width: 80%;
+  height: 90%;
+  position: absolute;
+  top: 30px;
+  .add_recipe_header {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid lightgrey;
+    h2 {
+      color: $buttons-headers;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .submit_button {
+      background-color: $buttons-headers;
+      color: $background-color;
+      border: none;
+      font-family: $font-open-sans;
+      font-weight: bold;
+      padding: 4px 20px;
+    }
+  }
+  .name_description {
+    .label_box {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      label {
+        color: $sidebar-nav-color;
+        margin-left: 50px;
+        font-size: 20px;
+      }
+      input {
+        margin-right: 50px;
+        width: 60%;
+      }
+      textarea {
+        margin-right: 50px;
+        width: 60%;
+      }
+    }
+
+  }
+  .instructions_ingredients {
+    display: flex;
+    position: relative;
+
+    .instructions {
+      width: 45%;
+      margin-left: 50px;
+    }
+    .ingredients {
+      width: 45%;
+      margin-right: 50px;
+    }
+    .storage {
+      margin: 50px 10px;
+      width: 90%;
+      max-height: 250px;
+      overflow-y: auto;
+      overflow-wrap: break-spaces;
+      .storageItem {
+        margin-bottom: 5px;
+        color: $sidebar-nav-color;
+        font-size: 16px;
+        list-style-type: decimal;
+      }
+      .storageItemIng {
+        margin-bottom: 5px;
+        color: $sidebar-nav-color;
+        font-size: 16px;
+        list-style-type: circle;
+      }
+
+    }
+    h3 {
+      color: $sidebar-nav-color;
+      font-size: 22px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid lightgrey;
+      margin-bottom: 15px;
+    }
+    i {
+      color: $info-success-color;
+      transform: scale(2);
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    input {
+      width: 90%;
+    }
+    .input_break {
+      height: 50px;
+    }
+    textarea {
+      width: 90%;
+      height: 80px;
+    }
+  }
+}

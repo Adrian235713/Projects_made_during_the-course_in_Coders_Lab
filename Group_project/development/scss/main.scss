@@ -1,0 +1,15 @@
+// CDN FONTAWESOME
+// <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+//
+// Sass:
+// https://fontawesome.com/how-to-use/on-the-web/using-with/sass
+@import "generic/reset";
+@import "settings/variables";
+@import "elements/base";
+@import "elements/index";
+@import "elements/index_slider";
+@import "elements/app_main";
+@import "elements/recipes";
+@import "elements/recipeAdd";
+@import "elements/schedules";
+@import "elements/weekly_schedule";

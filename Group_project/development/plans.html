@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Open+Sans:wght@300;400;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="JS_food_generator schedule_container">
+    <form class="schedule_header">
+        <label for="TYG_zapisz_i_zamknij">NOWY PLAN</label>
+        <input type="submit" id="TYG_zapisz_i_zamknij" value="Zapisz i zamknij">
+    </form>
+
+    <form class="schedule_informations">
+        <div class="schedule_info">
+            <label for="TYG_nazwa_planu">Nazwa Planu</label>
+            <input type="text" id="TYG_nazwa_planu" value="">
+        </div>
+        <div class="schedule_info">
+            <label for="TYG_opis_planu">Opis Planu</label>
+            <textarea id="TYG_opis_planu" value=""></textarea>
+        </div>
+        <div class="schedule_info">
+            <label for="TYG_numer_tygodnia">Numer Tygodnia</label>
+            <input type="text" id="TYG_numer_tygodnia" value="">
+        </div>
+    </form>
+
+    <table class="schedule_table">
+        <thead>
+        <th></th>
+        <th>Śniadanie</th>
+        <th>Drugie Śniadanie</th>
+        <th>Zupa</th>
+        <th>Drugie Danie</th>
+        <th>Kolacja</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Poniedziałek</td>
+            <td><select id="poniedzialek_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="poniedzialek_drugie_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="poniedzialek_zupa" class="JS_option_generate"></select></td>
+            <td><select id="poniedzialek_drugie_danie" class="JS_option_generate"></select></td>
+            <td><select id="poniedzialek_kolacja" class="JS_option_generate"></select></td>
+        </tr>
+        <tr>
+            <td>Wtorek</td>
+            <td><select id="wtorek_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="wtorek_drugie_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="wtorek_zupa" class="JS_option_generate"></select></td>
+            <td><select id="wtorek_drugie_danie" class="JS_option_generate"></select></td>
+            <td><select id="wtorek_kolacja" class="JS_option_generate"></select></td>
+        </tr>
+        <tr>
+            <td>Środa</td>
+            <td><select id="Sroda_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="Sroda_drugie_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="Sroda_zupa" class="JS_option_generate"></select></td>
+            <td><select id="Sroda_drugie_danie" class="JS_option_generate"></select></td>
+            <td><select id="Sroda_kolacja" class="JS_option_generate"></select></td>
+        </tr>
+        <tr>
+            <td>Czwartek</td>
+            <td><select id="czwartek_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="czwartek_drugie_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="czwartek_zupa" class="JS_option_generate"></select></td>
+            <td><select id="czwartek_drugie_danie" class="JS_option_generate"></select></td>
+            <td><select id="czwartek_kolacja" class="JS_option_generate"></select></td>
+        </tr>
+        <tr>
+            <td>Piątek</td>
+            <td><select id="piatek_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="piatek_drugie_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="piatek_zupa" class="JS_option_generate"></select></td>
+            <td><select id="piatek_drugie_danie" class="JS_option_generate"></select></td>
+            <td><select id="piatek_kolacja" class="JS_option_generate"></select></td>
+        </tr>
+        <tr>
+            <td>Sobota</td>
+            <td><select id="sobota_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="sobota_drugie_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="sobota_zupa" class="JS_option_generate"></select></td>
+            <td><select id="sobota_drugie_danie" class="JS_option_generate"></select></td>
+            <td><select id="sobota_kolacja" class="JS_option_generate"></select></td>
+        </tr>
+        <tr>
+            <td>Niedziela</td>
+            <td><select id="niedziela_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="niedziela_drugie_sniadanie" class="JS_option_generate"></select></td>
+            <td><select id="niedziela_zupa" class="JS_option_generate"></select></td>
+            <td><select id="niedziela_drugie_danie" class="JS_option_generate"></select></td>
+            <td><select id="niedziela_kolacja" class="JS_option_generate"></select></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+<script src="js/plan_tygodnia.js"></script>
+</body>
+</html>

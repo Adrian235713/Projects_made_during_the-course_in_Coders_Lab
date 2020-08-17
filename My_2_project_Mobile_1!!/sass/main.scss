@@ -1,0 +1,643 @@
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// xxxxxxxxxxxxxxxxxxx Import
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+@import "_reset";
+@use 'sass:map';
+
+*{
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+    $color-primary:#08A6E4;
+    $color-primary-shadow: rgba(7, 172, 230, .16);
+    $color-redish:#FB3B64;
+    $color-green:#55DFB4;
+    $color-black:#000000;
+    $color-grey:#A5A5A5;
+    $color-light-grey:#F7F7F7; 
+    $color-white:#FFFFFF;
+
+
+// Comend line !!! XD XD XD XD XD XD XD // Comend line !!! XD XD XD XD XD XD XD // Comend line !!! XD XD XD XD XD XD XD 
+// Comend line !!! XD XD XD XD XD XD XD // Comend line !!! XD XD XD XD XD XD XD // Comend line !!! XD XD XD XD XD XD XD 
+// Comend line !!! XD XD XD XD XD XD XD // Comend line !!! XD XD XD XD XD XD XD // Comend line !!! XD XD XD XD XD XD XD 
+// Comend line !!! XD XD XD XD XD XD XD // Comend line !!! XD XD XD XD XD XD XD // Comend line !!! XD XD XD XD XD XD XD 
+// Comend line !!! XD XD XD XD XD XD XD // Comend line !!! XD XD XD XD XD XD XD // Comend line !!! XD XD XD XD XD XD XD 
+// Comend line !!! XD XD XD XD XD XD XD // Comend line !!! XD XD XD XD XD XD XD // Comend line !!! XD XD XD XD XD XD XD 
+// Można zmieniać prametry strony, obrazków i tp... :) == Końcowe stylowanie dla leniwych 
+
+html {
+  font-size: 13px;
+}
+
+//all font sizes XD 
+$all_box_pading: 1.3px;
+$all_p_size: 1.4rem;
+$all_p_size_mid: 1.9rem; 
+$all_h1_size: 2.3rem;
+
+//Noteok trumpet phone - sieze photo ;) 
+$size_wid: 50%;
+$size_he: 50%;
+
+// Eye  - sieze photo
+$size_wid_2: 35%;
+$size_he_2: 35%;
+
+//Person sieze photo
+$size_wid_3: 20%;
+$size_he_3: 20%;
+
+//Catalogsieze photo 
+$size_wid_4: 25%;
+$size_he_4: 25%;
+
+//.grid-container - buttons 
+$size_buttons: 5%;
+
+
+//.grid-container - buttons - phone - emial
+$phon_emial: 14%;
+
+//.grid-container -fb - ti 
+$fb_ti: 100%;
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// xxxxxxxxxxxxxxxxxxx mixiny / fucion mixiny / fucion mixiny / fucion mixiny / fucion 
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+@mixin function_mid_mid_mid($pading) {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: $pading;
+}
+
+@mixin function_tex_p($tex_size,$tex_color) {
+  text-align: center;
+  font-size: $tex_size;
+  color: $tex_color;
+  margin: 1rem;
+  padding: 0.4rem;
+  font-family: 'Raleway';
+}
+
+@mixin function_tex_h2($tex_size,$tex_color) {
+  display: block;
+  text-align: center;
+  font-size: $tex_size;
+  color: $tex_color;
+  font-family: 'Open Sans';
+  margin: 5%;
+}
+
+
+@mixin fuction_photo_mid ($wid,$hi){
+    width: $wid;
+    height: $hi;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// xxxxxxxxxxxxxxxxxxx Styling  Styling Styling Styling Styling Styling Styling 
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// xxxxxxxxxxxxxxxxxxx body 
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+body {
+  height: 100%;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// xxxxxxxxxxxxxxxxxxx .grid-container_1 
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+.grid-container_1 { height: 800px; margin: 0; 
+  @include function_mid_mid_mid($all_box_pading);
+
+
+//@include function_mid_mid_mid(calc($all_box_pading * 2)); -- Nie wiem czemu nie chce mi to działać :( 
+
+}
+
+.grid-container_1 {
+  display: grid;
+  grid-template-columns: 1.7fr 0.3fr;
+  grid-template-rows: 0.3fr 1.4fr 1.3fr;
+  gap: 1px 1px;
+  grid-template-areas: 
+  "Title Menu-"
+   "Title_main_photo Title_main_photo" 
+   "Title_main_photo Title_main_photo";
+}
+
+.Title { 
+  grid-area: Title; 
+  h2 {
+    @include function_tex_h2($all_h1_size,$color-primary);
+    text-align: left;
+  }
+  
+
+}
+
+.Menu- { grid-area: Menu-; }
+    li {
+      @include function_tex_p($all_p_size,$color-primary);
+      font-weight: bold;
+      margin: 25%;
+    }
+
+.Title_main_photo { 
+  grid-area: Title_main_photo; 
+  background-image: url("../assets/Background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+
+
+
+
+  h2 {
+    @include function_tex_h2($all_h1_size,$color-black);
+  }
+
+}
+
+/* For presentation only, no need to copy the code below */
+
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// xxxxxxxxxxxxxxxxxxx .grid-container_2
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+.grid-container_2 {
+   height: 1200px; 
+   margin: 0; 
+}
+
+.grid-container_2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1.5fr 0.5fr 0.5fr 1.5fr 0.5fr 0.5fr 1.5fr 0.5fr 0.5fr;
+  gap: 1px 1px;
+  grid-template-areas: "main-title" "ph-1" "T-1" "C-1" "ph-2" "T-2" "C-2" "ph-3" "T-3" "C-3";
+}
+
+.main-title { grid-area: main-title; 
+  h2 {
+    @include function_tex_h2($all_h1_size,$color-black);
+  }
+}
+
+.ph-1 { 
+  grid-area: ph-1; 
+  
+  @include function_mid_mid_mid ($all_box_pading);
+
+  img {
+    
+    @include fuction_photo_mid($size_wid_3 , $size_he_3);
+
+  }
+
+ 
+}
+
+.T-1 { 
+  grid-area: T-1; 
+  @include function_tex_h2($all_h1_size,$color-black);
+  font-weight: bold;
+}
+
+.C-1 { 
+  grid-area: C-1; 
+
+  p {
+    @include function_tex_p($all_p_size, $color-grey);
+  }
+
+}
+
+.ph-2 { 
+  grid-area: ph-2; 
+  @include function_mid_mid_mid ($all_box_pading);
+
+  img {
+    
+    @include fuction_photo_mid($size_wid_2, $size_he_2);
+
+  }
+
+}
+
+.T-2 {
+   grid-area: T-2;
+
+   h2 {
+    @include function_tex_h2($all_h1_size,$color-black);
+    font-weight: bold;
+  }
+  
+ }
+
+.C-2 { 
+  grid-area: C-2; 
+  p {
+    @include function_tex_p($all_p_size, $color-grey);
+  }
+}
+
+.ph-3 { 
+  grid-area: ph-3; 
+  @include function_mid_mid_mid ($all_box_pading);
+
+  img {
+    
+    @include fuction_photo_mid($size_wid_4, $size_he_4);
+
+  }
+
+
+}
+
+.T-3 {
+   grid-area: T-3; 
+
+  h2 {
+    @include function_tex_h2($all_h1_size,$color-black);
+    font-weight: bold;
+  }
+
+}
+
+.C-3 { 
+  grid-area: C-3; 
+  p {
+    @include function_tex_p($all_p_size, $color-grey);
+  }
+}
+
+
+
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// xxxxxxxxxxxxxxxxxxx .grid-container_3
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+ .grid-container_3 { height: 1200px; margin: 0; }
+
+.grid-container_3 {
+  display: grid;
+
+  grid-template-rows: 2.5fr 1fr 1fr 2.5fr 1fr 1fr 2.5fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "Photo-1" "Title-1" "Content-1" "Photo-2" "Title-2" "Content-2" "Photo-3" "Title-3" "Content-3";
+}
+
+.Photo-1 { 
+  grid-area: Photo-1; 
+  @include function_mid_mid_mid($all_box_pading);
+
+    img {
+      @include fuction_photo_mid($size_wid,$size_he);
+    }
+
+}
+
+.Photo-2 { 
+  grid-area: Photo-2; 
+  @include function_mid_mid_mid($all_box_pading);
+
+    img {
+      @include fuction_photo_mid($size_wid,$size_he);
+    }
+
+}
+
+.Photo-3 { grid-area: Photo-3;
+  background-color: $color-green;
+  @include function_mid_mid_mid($all_box_pading);
+
+    img {
+      @include fuction_photo_mid($size_wid,$size_he);
+    }
+
+}
+
+.Title-1 { 
+  grid-area: Title-1; 
+
+    h2 {
+      @include function_tex_h2($all_h1_size,$color-black);
+    }
+  
+}
+
+.Title-2 { 
+  grid-area: Title-2; 
+    h2 {
+      @include function_tex_h2($all_h1_size,$color-black);
+    }
+    
+
+}
+
+.Title-3 {
+   grid-area: Title-3; 
+   h2 {
+    @include function_tex_h2($all_h1_size,$color-black);
+  }
+  }
+
+.Content-1 { 
+  grid-area: Content-1; 
+p {
+  @include function_tex_p($all_p_size, $color-black);
+}
+}
+
+.Content-2 { grid-area: Content-2; 
+p {
+  @include function_tex_p($all_p_size, $color-black);
+}
+}
+
+.Content-3 { grid-area: Content-3; 
+p{
+  @include function_tex_p($all_p_size, $color-black);
+}
+}
+
+
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// xxxxxxxxxxxxxxxxxxx .grid-container_4
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+.grid-container_4 { height: 1200px; margin: 0; }
+
+.grid-container_4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;;
+  padding: 1rem;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "Pracing" "Basic" "Profesional" "Premium";
+
+  li {
+    @include function_tex_p($all_p_size,$color-black );
+    margin: 0.5rem;
+  }
+  p {
+    @include function_tex_p($all_p_size,$color-black );
+  }
+
+
+  img {
+    width: $size_buttons;
+    height: $size_buttons;
+  }
+}
+
+// //all font sizes XD 
+// $all_box_pading: 1.3px;
+// $all_p_size: 1.4rem;
+// $all_p_size_mid: 1.9rem; 
+// $all_h1_size: 2.3rem;
+
+.Basic {
+  display: flex;
+  justify-content: center;
+}
+
+.Basic { grid-area: Basic; 
+  
+
+  h2 {
+    @include function_tex_h2($all_h1_size, $color-redish);
+  }
+
+
+  width: 800px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  border: 1rem solid $color-redish;
+  border-radius: 90px;
+
+  .Basic-box-1, .Basic-box-2 { 
+    height: 200px;
+    width: 300px;
+
+  }
+
+
+}
+
+.Profesional { grid-area: Profesional; 
+
+  h2 {
+    @include function_tex_h2($all_h1_size, $color-primary);
+  }
+
+  width: 800px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  border: 1rem solid $color-primary;
+  border-radius: 90px;
+
+  .Profesional-box-1, .Profesional-box-2 { 
+    height: 200px;
+    width: 350px;
+  }
+
+}
+
+.Premium { 
+  grid-area: Premium; 
+
+  h2 {
+    @include function_tex_h2($all_h1_size, $color-green);
+  }
+
+  width: 800px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  border: 1rem solid $color-green;
+  border-radius: 90px;
+
+  .Premium-box-1, .Premium-box-2 { 
+    height: 200px;
+    width: 300px;
+  }
+
+
+}
+
+
+
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// xxxxxxxxxxxxxxxxxxx .grid-container_5
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+.grid-container_5 { height: 1200px; margin: 0; }
+
+.grid-container_5 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 3fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "question" "cont" "email" "phone" "name" "client-name" "rodo" "footer";
+}
+
+
+.question { 
+  grid-area: question; 
+  h2 {
+    @include function_tex_h2($all_h1_size,$color-black);
+    font-weight: bold;
+  }
+}
+
+.cont {
+   grid-area: cont;
+   p {
+     @include function_tex_p($all_p_size_mid,$color-black);
+     font-weight: bold;
+   }
+}
+.email { 
+    grid-area: email; 
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: $phon_emial;
+      height: $phon_emial;
+    }
+
+    p {
+      display: block;
+      @include function_tex_p($all_p_size_mid,$color-primary);
+      @include function_mid_mid_mid(1rem);
+    }
+}
+
+.phone { 
+  
+    grid-area: phone; 
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: $phon_emial;
+      height: $phon_emial;
+    }
+
+    p {
+      @include function_tex_p($all_p_size_mid,$color-primary);
+      @include function_mid_mid_mid(1rem);
+    }
+
+}
+
+.name { 
+  grid-area: name; 
+
+  form {
+    @include function_tex_p($all_p_size,$color-primary);
+    text-align: left;
+  }
+
+}
+
+.client-name { 
+  grid-area: client-name; 
+ 
+
+  form {
+    @include function_tex_p($all_p_size,$color-primary);
+    text-align: left;
+  }
+
+}
+
+.rodo { grid-area: rodo; 
+
+  form {
+    @include function_tex_p($all_p_size,$color-primary);
+    text-align: left;
+    text-align: justify;
+  }
+
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 2.4fr 0.3fr 0.3fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". TD FB" ". TD FB";
+  grid-area: footer;
+
+  h2 {
+    @include function_tex_h2($all_h1_size,$color-primary);
+  }
+  p{
+    @include function_tex_p($all_p_size,$color-grey );
+  }
+  
+
+}
+
+.FB { grid-area: FB; 
+  @include fuction_photo_mid(100%,100% );
+  margin-top: 40%;
+  padding: 3%;
+  img {
+    width: $fb_ti;
+    height: $fb_ti;
+  }
+
+}
+
+.TD { grid-area: TD; 
+  @include fuction_photo_mid(100%,100% );
+  margin-top: 40%;
+  padding: 3%;
+
+  img {
+    width: $fb_ti;
+    height: $fb_ti;
+  }
+  
+}
+
+
+
